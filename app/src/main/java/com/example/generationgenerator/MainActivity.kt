@@ -10,6 +10,16 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+    // Enum class for generation
+    enum class Generation (val title: String) {
+        SILENT_GEN ("Silent gen"),
+        BOOMERS("Boomers"),
+        GEN_X (" Gen X"),
+        MILLENNIAL ("Millennial"),
+        GEN_Z ("Gen Z"),
+        GEN_ALPHA ("Gen Alpha"),
+        GEN_BETA ("Gen Beta")
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -19,6 +29,15 @@ class MainActivity : AppCompatActivity() {
         val inputNumber = findViewById<EditText>(R.id.InputNumber)
         val submitBtn = findViewById<Button>(R.id.Submitbutton)
         val GeneratorTxt= findViewById<TextView>(R.id.TxtGen)
+
+        // Added code when submit button is clicked
+        submitBtn.setOnClickListener {
+
+            var result = ""
+
+
+
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
