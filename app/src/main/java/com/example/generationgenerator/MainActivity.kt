@@ -32,8 +32,13 @@ class MainActivity : AppCompatActivity() {
 
         // Added code when submit button is clicked
         submitBtn.setOnClickListener {
+           //Get year from edit text
+            var year = inputNumber.text
 
-            var result = ""
+            //Determine generation using when expression
+            val generation = when (year) {
+                
+            }
 
 
 
