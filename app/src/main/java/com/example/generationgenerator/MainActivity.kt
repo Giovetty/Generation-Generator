@@ -37,7 +37,14 @@ class MainActivity : AppCompatActivity() {
 
             //Determine generation using when expression
             val generation = when (year) {
-                
+               in 1925..1945 -> Generation.SILENT_GEN
+               in 1946..1964 -> Generation.BOOMERS
+               in 1965..1980 -> Generation.GEN_X
+               in 1981..1996 -> Generation.MILLENNIAL
+               in 1997..2012 -> Generation.GEN_Z
+               in 2013..2024 -> Generation.GEN_ALPHA
+               in 2025..3000 -> Generation.GEN_BETA
+               else -> "Invalid year, generation not found"
             }
 
 
