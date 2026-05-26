@@ -1,6 +1,9 @@
 package com.example.generationgenerator
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,6 +15,9 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
+        val inputNumber = findViewById<EditText>(R.id.InputNumber)
+        val submitBtn = findViewById<Button>(R.id.Submitbutton)
+        val GeneratorTxt= findViewById<TextView>(R.id.TxtGen)
         
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
