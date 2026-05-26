@@ -15,10 +15,11 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
+        // Added variables to UI elements
         val inputNumber = findViewById<EditText>(R.id.InputNumber)
         val submitBtn = findViewById<Button>(R.id.Submitbutton)
         val GeneratorTxt= findViewById<TextView>(R.id.TxtGen)
-        
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
